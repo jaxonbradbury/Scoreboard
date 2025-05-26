@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container setup-container">
+        <h1>Game Setup</h1>
+        <div class="form-group">
+            <label for="numTeams">Number of Teams:</label>
+            <select id="numTeams">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="twoPlayersPerTeam">2 People Per Team?</label>
+            <label class="switch">
+                <input type="checkbox" id="twoPlayersPerTeam">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <button id="startGameBtn">Start Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
