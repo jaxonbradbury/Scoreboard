@@ -1,0 +1,187 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden; /* Prevents scrollbars when fullscreen */
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.setup-container h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle Switch CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Scoreboard Page Specific Styles */
+.scoreboard-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height to make space for reset button */
+    overflow: hidden;
+}
+
+.team-column {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    height: 100%;
+    border-right: 1px solid #fff3; /* Optional: subtle separator */
+}
+
+.team-column:last-child {
+    border-right: none;
+}
+
+.team-name {
+    font-size: 2.5em; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+}
+
+.score {
+    font-size: 6em; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Text shadow */
+}
+
+.score-controls button {
+    font-size: 1.5em; /* Increased font size */
+    padding: 10px 15px;
+    margin: 0 10px;
+    min-width: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.score-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.reset-button {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #dc3545;
+}
+.reset-button:hover {
+    background-color: #c82333;
+}
+
+/* Define some base colors for teams */
+.team-color-0 { background-color: #4CAF50; /* Green */ }
+.team-color-1 { background-color: #2196F3; /* Blue */ }
+.team-color-2 { background-color: #FFC107; /* Amber */ }
+.team-color-3 { background-color: #E91E63; /* Pink */ }
+.team-color-4 { background-color: #9C27B0; /* Purple */ }
+.team-color-5 { background-color: #FF5722; /* Deep Orange */ }
+/* Add more if you allow more than 6 teams */
